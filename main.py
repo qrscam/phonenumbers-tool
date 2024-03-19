@@ -8,26 +8,17 @@ class Numbers:
   def carrier(self, number: str):
     clixy = phonenumbers.parse(number)
     result = carrier.name_for_number(clixy, "en")
-    try:
-      print(result)
-    except phonenumbers.is_valid_number:
-      print("Invalid number")
-
+    print(result)
+    
   def geocoder(self, number: str):
     idk = phonenumbers.parse(number)
     result = geocoder.description_for_number(idk, "en")
-    try:
-      print(result)
-    except phonenumbers.is_valid_number:
-      print("Invalid number")
-
+    print(result)
+    
   def timezone(self, number: str):
     idk = phonenumbers.parse(number)
     result = timezone.time_zones_for_number(idk)
-    try:
-      print(result)
-    except phonenumbers.is_valid_number:
-      print("Invalid number")
+    print(result)
 
   def start(self):
     os.system("cls")
